@@ -1,0 +1,27 @@
+{
+  "name": "eoko/credit-bundle",
+  "description": "Eoko credit bundle",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "MAILLET Maxime",
+      "email": "maxime.maillet@eoko.fr"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "gedmo/doctrine-extensions": "^2.4",
+    "doctrine/orm": "^2.5",
+    "stof/doctrine-extensions-bundle": "^1.2",
+  },
+  "repositories": [
+  ],
+  "autoload": {
+    "psr-4": { "Eoko\\CreditBundle\\": "" },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "require-dev": {
+  }
+}
