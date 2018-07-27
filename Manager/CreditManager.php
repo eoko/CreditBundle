@@ -138,6 +138,19 @@ class CreditManager
     }
 
     /**
+     * Update all credit with base
+     */
+    public function updateAll()
+    {
+        $usersCredit = $this->entityManager->getRepository(UserCredit::class)->findAll();
+        foreach ($usersCredit as $userCredit) {
+            $userCredit->setCredit($this->baseCredit);
+        }
+
+        $this->entityManager->flush();
+    }
+
+    /**
      * @return int|null
      */
     protected function getUserId()
