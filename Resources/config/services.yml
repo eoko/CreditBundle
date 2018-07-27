@@ -1,4 +1,5 @@
 services:
-#    credit.example:
-#        class: Eoko\CreditBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  Eoko\CreditBundle\Manager\CreditManager:
+    autowire: true
+    arguments:
+      $baseCredit: '%credit.base_credit%'
